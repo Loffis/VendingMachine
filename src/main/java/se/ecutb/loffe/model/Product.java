@@ -43,4 +43,13 @@ public abstract class Product {
     public String use(int index){
         return "You happily chew on the " + getName();
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", productInfo='" + productInfo + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

@@ -10,4 +10,12 @@ public class Beverage extends Product {
     public String use(int index){
         return "You drink " + getName();
     }
+
+    @Override
+    public String toString() {
+        return "Beverage: " +
+                "name='" + name + '\'' +
+                ", productInfo='" + productInfo + '\'' +
+                ", price=" + price;
+    }
 }

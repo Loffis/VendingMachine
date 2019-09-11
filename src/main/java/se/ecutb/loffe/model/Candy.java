@@ -6,4 +6,11 @@ public class Candy extends Product {
         super(name, productInfo, price);
     }
 
+    @Override
+    public String toString() {
+        return "Candy: " +
+                "name='" + name + '\'' +
+                ", productInfo='" + productInfo + '\'' +
+                ", price=" + price;
+    }
 }

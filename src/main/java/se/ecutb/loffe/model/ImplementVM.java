@@ -11,7 +11,7 @@ public class ImplementVM implements VendingMachine{
         int[] validMoney = new int[]{1, 5, 10, 20, 50, 100, 500, 1000};
         for (int i = 0; i < validMoney.length; i++) {
             if (amount == validMoney[i]) {
-                balance = balance + validMoney[i];
+                balance += validMoney[i];
                 System.out.println(validMoney[i] + " kr added.");
                 beforeDeposit = balance;
                 break;
@@ -45,6 +45,7 @@ public class ImplementVM implements VendingMachine{
 
     @Override
     public String[] getProducts() {
+       
         return new String[0];
     }
 
@@ -57,7 +58,7 @@ public class ImplementVM implements VendingMachine{
         Product fruit1 = new Fruit("Banana", "Brownish", 2);
         Product fruit2 = new Fruit("Apple", "Is a fruit and nothin else", 3);
         Product beverage1 = new Beverage("Guinness", "ABV 4.5%", 30);
-        Product beverage2 = new Beverage("Omnipollo Noah Pecan Mud Cake", "ABV 11%", 50);
+        Product beverage2 = new Beverage("Omnipollo Noa Pecan Mud Cake", "ABV 11%", 50);
         products[0] = candy1;
         products[1] = candy2;
         products[2] = fruit1;

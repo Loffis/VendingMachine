@@ -10,4 +10,12 @@ public class Fruit extends Product {
     public String use(int index){
         return "You eat the " + getName() + " because it's healthy.";
     }
+
+    @Override
+    public String toString() {
+        return "Fruit: " +
+                "name='" + name + '\'' +
+                ", productInfo='" + productInfo + '\'' +
+                ", price=" + price;
+    }
 }
