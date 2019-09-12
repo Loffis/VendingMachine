@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import se.ecutb.loffe.model.ImplementVM;
+import se.ecutb.loffe.model.Product;
 import se.ecutb.loffe.model.VendingMachine;
 
 
@@ -32,4 +33,13 @@ public class AppTest
         Assert.assertEquals(21, vendingMachine.getBalance());
 
     }
+    @Test
+    public void test_get_description() {
+        VendingMachine vendingMachine = new ImplementVM();
+        String expected = "ABV 11%";
+
+        Assert.assertEquals(expected, vendingMachine.getDescription(5));
+
+    }
+
 }

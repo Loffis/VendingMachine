@@ -4,6 +4,7 @@ package se.ecutb.loffe.model;
 public class ImplementVM implements VendingMachine{
 
     int balance = 0;
+    Product[] products = new Product[6];
 
     @Override
     public void addCurrency(int amount) {
@@ -24,6 +25,8 @@ public class ImplementVM implements VendingMachine{
 
     @Override
     public Product request(int productNumber) {
+
+
         return null;
     }
 
@@ -33,8 +36,10 @@ public class ImplementVM implements VendingMachine{
     }
 
     @Override
-    public String getDescription() {
-        return null;
+    public String getDescription(int productNumber) {
+        String description = products.toString();
+        System.out.println(description);
+        return description;
     }
 
     @Override
@@ -45,8 +50,14 @@ public class ImplementVM implements VendingMachine{
 
     @Override
     public String[] getProducts() {
-       
-        return new String[0];
+        String[] returnProduct = new String[6];
+        returnProduct[0] = products[0].toString();
+        returnProduct[1] = products[1].toString();
+        returnProduct[2] = products[2].toString();
+        returnProduct[3] = products[3].toString();
+        returnProduct[4] = products[4].toString();
+        returnProduct[5] = products[5].toString();
+        return returnProduct;
     }
 
 
